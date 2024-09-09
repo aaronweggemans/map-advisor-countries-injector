@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fs = require('fs').promises;
 const mysql = require('mysql2');
 
@@ -23,7 +24,14 @@ async function readFileAndStartConnection() {
 }
 
 async function startConnection(countries, subData) {
-  const connection = mysql.createConnection({});
+  console.log(`Connecting with host: \t ${process.env.DB_HOST}`);
+
+  const connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DATABASE,
+  });
 
   const importCountries = countries
     .map(
