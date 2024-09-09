@@ -1,0 +1,20 @@
+{
+  "name": "map-advisor-countries-injector",
+  "version": "1.0.0",
+  "description": "Runs a script that inserts all the world countries json file into a database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Aaron Weggemans",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "mariadb": "^3.3.1",
+    "mssql": "^11.0.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.0"
+  }
+}
